@@ -55,3 +55,9 @@ class BooksCollector:
     # получаем список Избранных книг
     def get_list_of_favorites_books(self):
         return self.favorites
+
+# проверяем добавление новой книги
+def test_add_new_book_added_correctly():
+    books_collector = BooksCollector()
+    books_collector.add_new_book('Мастер и Маргарита')
+    assert 'Мастер и Маргарита' in books_collector.books_genre
